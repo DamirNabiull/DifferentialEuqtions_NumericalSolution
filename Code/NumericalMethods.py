@@ -1,5 +1,4 @@
 from sympy.parsing.sympy_parser import parse_expr
-from sympy import *
 
 
 class EquationMethod():
@@ -48,11 +47,6 @@ class EquationMethod():
         self.lte_table.append(self.lte)
         self.gte_table.append(abs(self.y - self.Y))
         self.size += 1
-
-    def roundTable(self):
-        for i in range(len(self.table)):
-            for j in range(1, len(self.table[i])):
-                self.table[i][j] = round(self.table[i][j], self.roundNum)
 
     def solve(self):
         i = round(self.leftValue + self.step, self.roundNum)
@@ -130,3 +124,4 @@ class RungeKuttaEquation(EquationMethod):
         self.k4 = self.k4.replace('y', '(y + h*' + self.k3 + ')')
 
         self.methodEquation = 'y + h*(' + self.k1 + ' + 2*' + self.k2 + ' + 2*' + self.k3 + ' + ' + self.k4 + ')/6'
+

@@ -1,9 +1,7 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as Canvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
-
-import random
 
 
 class MatplotlibWidget(QtWidgets.QWidget):
@@ -33,7 +31,5 @@ class MatplotlibWidget(QtWidgets.QWidget):
                 y = i[1]
                 color = i[2]
                 ax.plot(x, y, color, label=f'{i[3]}')
-
         ax.legend()
-
         self.canvas.draw()

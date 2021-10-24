@@ -1,5 +1,6 @@
 from sympy.parsing.sympy_parser import parse_expr
 from sympy import *
+from NumericalMethods import EquationMethod
 
 
 class ExactMethod():

@@ -89,9 +89,6 @@ class MyApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.solutions[0] = [self.x, self.y, 'b', 'Exact']
 
     def update_Euler(self):
-        # print(self.is_Euler == False)
-        # print(self.checkBox.checkState())
-        # print(did_changed)
         if self.is_Euler == False and self.checkBox.checkState() == 2:
             if self.is_Euler_changed or not self.Euler:
                 self.Euler = NumericalMethods.EulerEquation(settings.equation, settings.diff_equation, x0=self.x0,
@@ -129,9 +126,6 @@ class MyApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             self.is_Euler_changed = False
 
     def update_ImprovedEuler(self):
-        # print(self.is_ImprovedEuler == False)
-        # print(self.checkBox_2.checkState())
-        # print(did_changed)
         if self.is_ImprovedEuler == False and self.checkBox_2.checkState() == 2:
             if self.is_ImprovedEuler_changed or not self.ImprovedEuler:
                 self.ImprovedEuler = NumericalMethods.EulerImprovedEquation(settings.equation, settings.diff_equation,
@@ -172,9 +166,6 @@ class MyApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
             self.is_ImprovedEuler_changed = False
 
     def update_RungeKutta(self):
-        # print(self.is_RungeKutta == False)
-        # print(self.checkBox_3.checkState())
-        # print(self.is_RungeKutta_changed)
         if self.is_RungeKutta == False and self.checkBox_3.checkState() == 2:
             if self.is_RungeKutta_changed or not self.RungeKutta:
                 self.RungeKutta = NumericalMethods.RungeKuttaEquation(settings.equation, settings.diff_equation,
